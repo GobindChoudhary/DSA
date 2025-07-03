@@ -1,0 +1,18 @@
+// HOW PROMPT SYNC WORK
+
+// The value assigned to the prompt variable is a function that allows you to get user input from the command line.
+
+// Specifically, after this line:
+// let prompt = require("prompt-sync")();
+
+// require("prompt-sync") loads the prompt-sync module, which exports a function.
+// The () immediately calls that function, returning another function that reads user input.
+// So, prompt is now a function you can call like prompt("Enter something: ") to get input from the user as a string.
+
+//  UNDEFINED + NUMBER  = NaN
+
+// always be aware of the precidence of the statement in assignment
+// process.stdout.write(reverse.join(",")); => alway excepts string
+
+rotate by 1
+
