@@ -39,12 +39,22 @@ const arr2 = Array.from({ length: size }, (v, i) => {
 });
 
 let sum = 0;
+// for (let i = 0; i < arr2.length; i++) {
+//   for (let j = 0; j < arr2[i].length; j++) {
+//     if (i == j || i + j == arr2.length - 1) {
+//       sum += arr2[i][j];
+//     }
+//   }
+// }
+// console.log(arr2);
+// console.log(sum); // O(n2) time complexity
+
+//  Optimized solution
 for (let i = 0; i < arr2.length; i++) {
-  for (let j = 0; j < arr2[i].length; j++) {
-    if (i == j || i + j == arr2.length - 1) {
-      sum += arr2[i][j];
-    }
-  }
+  sum += arr2[i][i];
+  sum += arr2[i][arr2.length - 1 - i];
 }
-console.log(arr2);
-console.log(sum); // O(n2) time complexity
+if ((arr2.length - 1) % 2 == 0) {
+  sum -= arr2[Math.floor(arr2.length / 2)][Math.floor(arr2.length / 2)];
+}
+console.log(sum); // O(n) time complexity
