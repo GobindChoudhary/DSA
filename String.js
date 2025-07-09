@@ -131,3 +131,77 @@
 //     console.log(String.fromCharCode(i) + "=>" + arr[i]);
 //   }
 // }
+
+// Capitalised first and last char of each word of array
+
+// without using method toUpperCase()
+
+// let str = "hello world";
+// let arr = str.split(" ");
+// let ans = "";
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].length <= 2) ans += arr[i].toUpperCase() + " ";
+//   let first = String.fromCharCode(arr[i].charCodeAt(0) - 32);
+//   let last = String.fromCharCode(arr[i].charCodeAt(arr[i].length - 1) - 32);
+//   ans += first + arr[i].slice(1, arr[i].length - 1) + last + " ";
+// }
+// console.log(ans);
+
+// using method toUpperCase()
+
+// let str = "hello world";
+// let arr = str.split(" ");
+// let ans = "";
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].length <= 2) ans += arr[i].toUpperCase() + " ";
+//   ans +=
+//     arr[i][0].toUpperCase() +
+//     arr[i].slice(1, arr[i].length - 1) +
+//     arr[i][arr[i].length - 1].toUpperCase() +
+//     " ";
+// }
+// console.log(ans);
+
+// toLowerCase
+
+// var toLowerCase = function (s) {
+//   let arr = [];
+//   for (let i = 0; i < s.length; i++) {
+//     if (s.charCodeAt(i) > 64 && s.charCodeAt(i) < 91) {
+//       arr.push(String.fromCharCode(s.charCodeAt(i) + 32));
+//     } else {
+//       arr.push(s[i]);
+//     }
+//   }
+//   return arr.join("");
+// };
+
+// console.log(toLowerCase("heLLo"));
+
+// Valid Anagram
+
+// var isAnagram = function (s, t) {
+//   let arr = new Array(123).fill(0); //[0......122]
+//   let valid = true;
+//   if (s.length != t.length) {
+//     valid = false;
+//   } else {
+//     for (let i = 0; i < s.length; i++) {
+//       let ascii = s.charCodeAt(i);
+//       arr[ascii] = arr[ascii] + 1;
+//     }
+//     for (let i = 0; i < t.length; i++) {
+//       let ascii = t.charCodeAt(i);
+//       arr[ascii] = arr[ascii] - 1;
+//     }
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] != 0) {
+//         valid = false;
+//         break;
+//       }
+//     }
+//   }
+//   return valid;
+// };
+
+// console.log(isAnagram("anagram", "nagaram"));
