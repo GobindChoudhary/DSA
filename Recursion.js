@@ -44,7 +44,6 @@ function fact(n) {
 // console.log(fact(5));
 
 // fibbonacci series
-
 function fab(n, first, sec) {
   if (n == 0) return "";
   console.log(first);
