@@ -51,3 +51,21 @@ function fab(n, first, sec) {
   return "";
 }
 fab(5, 0, 1);
+
+// sum of digit using recursion
+
+function sumOfDigit(n) {
+  if (n == 0) return 0;
+  return (n % 10) + sumOfDigit(Math.floor(n / 10));
+}
+console.log(sumOfDigit(1234));
+
+// reverse of the number of digit
+
+function reverse(n) {
+  if (n <= 0) return "";
+  return (n % 10) + reverse(Math.floor(n / 10));
+}
+console.log(reverse(1234));
+
+
